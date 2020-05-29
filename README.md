@@ -14,10 +14,8 @@ an examplar *GitOps* repository can be found at https://github.com/rhd-gitops-ex
 
 So what happens here, with the promote?
 
-https://docs.google.com/document/d/102LiAQBc0Mb3ZNSguL1ZhCojvEXOGGtzUdub-e58Mog/edit# outlines the design in more detail, but specifically (for the local "source to GitOps" repository), this happens:
+https://github.com/rhd-gitops-example/services/blob/master/README.md#services-- outlines the design in more detail, but specifically (for the local "source to GitOps" repository), this happens:
 
 A pull request will be created against the GitOps repository, whereby you will see the `config/deploy.yaml` contents are now in the GitOps repository's `/environments/*environment name*/services/*service name*/base/config` folder. 
 
-In the GitOps repository, is assumed there'll be only one folder under `environments` for now, otherwise you'll have to provide a `--env` flag which I've yet to fully implement and document. If the GitOps repository has `environments/stage`, that would be used as the target folder.
-
-If there are several, you can add `--env prod` for example, and then `environments/prod` will be used as the target folder instead. It is important to note this target folder only exists on the GitOps repository, not your source application's repository.
+In the GitOps repository, it's assumed there'll be only one folder under `environments` for now, otherwise you'll have to provide a `--env` flag which I've yet to fully implement and document (see https://github.com/rhd-gitops-example/services/issues/92). If the GitOps repository has `environments/stage`, that would be used as the target folder.
