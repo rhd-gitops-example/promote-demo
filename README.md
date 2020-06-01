@@ -18,4 +18,4 @@ https://github.com/rhd-gitops-example/services/blob/master/README.md#services-- 
 
 A pull request will be created against the GitOps repository, whereby you will see the `config/deploy.yaml` contents are now in the GitOps repository's `/environments/*environment name*/services/*service name*/base/config` folder. 
 
-In the GitOps repository, it's assumed there'll be only one folder under `environments` for now, otherwise you'll have to provide a `--env` flag which I've yet to fully implement and document (see https://github.com/rhd-gitops-example/services/issues/92). If the GitOps repository has `environments/stage`, that would be used as the target folder.
+In the GitOps repository, it's assumed there'll be only one folder under `environments` for now, otherwise you'll have to provide a `--env` flag which we have yet to fully implement and document (see https://github.com/rhd-gitops-example/services/issues/92). If the GitOps repository has `environments/stage`, that would be used as the target folder.
